@@ -69,8 +69,7 @@ class _VideoViewerState extends State<VideoViewer> {
     final controller = videoPlayerController;
     return controller == null
         ? Container()
-        : Expanded(
-            child: Flexible(
+        :  Flexible(
               fit: controller.value.rotationCorrection == 0 ? FlexFit.loose : FlexFit.tight,
               child: AspectRatio(
                 aspectRatio: controller.value.aspectRatio,
@@ -82,7 +81,6 @@ class _VideoViewerState extends State<VideoViewer> {
                         ),
                       ),
               ),
-            ),
           );
   }
 
